@@ -11,8 +11,10 @@ This sample notebook walks you through how you can leverage Amazon Textract layo
 - Page Numbers
 - Key-Value pairs
 
-Here is a snippet of Textract Layout feature on a page of Amazon Sustainability report:
+Here is a snippet of Textract Layout feature on a page of Amazon Sustainability report using the Textract Console UI:
 <img src="images/amazonsus2022.jpg" width="1000"/>
+
+You can try out the textract service from your AWS account by navigating to the Amazon Textract console.
 
 The [Amazon Textract Textractor Library](https://aws-samples.github.io/amazon-textract-textractor/index.html) is a library that seamlessly works with Textract features to aid in document processing. You can start by checking out the [examples in the documentation.](https://aws-samples.github.io/amazon-textract-textractor/notebooks/layout_analysis_for_text_linearization.html)
 This notebook makes use of the Textractor library to call Amazon Textract and process the response from Amazon Textract. Enriches the extracted document text with xml tags to identify sections which makes it easy for layout-aware chunking and document indexing into a vector database to improve Retrieval Augmented Generation (RAG) performance.
