@@ -12,7 +12,7 @@ This sample notebook walks you through how you can leverage Amazon Textract layo
 - Key-Value pairs
 
 Here is a snippet of Textract Layout feature on a page of Amazon Sustainability report:
-<img src="image/amazonsus2022.JPG" width="1000"/>
+<img src="images/amazonsus2022.JPG" width="1000"/>
 
 The [Amazon Textract Textractor Library](https://aws-samples.github.io/amazon-textract-textractor/index.html) is a library that seamlessly works with Textract features to aid in document processing. You can start by checking out the [examples in the documentation.](https://aws-samples.github.io/amazon-textract-textractor/notebooks/layout_analysis_for_text_linearization.html)
 This notebook makes use of the Textractor library to call Amazon Textract and process the response from Amazon Textract. Enriches the extracted document text with xml tags to identify sections which makes it easy for layout-aware chunking and document indexing into a vector database to improve Retrieval Augmented Generation (RAG) performance.
@@ -20,7 +20,7 @@ It also walks you through sample Generative-AI usecases that can be improved wit
 
 ## DOCUMENT PROCESSING AND INDEXING
 
-<img src="image/txt layout-Page-2.jpg" width="800"/>
+<img src="images/txt layout-Page-2.jpg" width="800"/>
 
 1. Upload multi-page document to Amazon S3
 2. Call Amazon Textract Start Document Analysis api call to extract Document Text including Layout and Tables. The response from this api call is the layout organized text and the pandas tables of each table detected in the document.
@@ -34,6 +34,6 @@ It also walks you through sample Generative-AI usecases that can be improved wit
 
 ## RETRIEVAL AUGMENTED GENERATION
 
-<img src="image/rag.jpg" width="800"/>
+<img src="images/rag.jpg" width="800"/>
 
 During RAG, we get the topK=n similar passages from the Vector DataBase (Amazon OpenSearch). A prompt template is created which includes the retrieved passage(s) and passage index table metadata for all tables in the page(s) the passage(s) are found. This provides more information to the LLM especially for queries involving tables. The same approach can be carried out for list items found in pages.
