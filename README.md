@@ -1,4 +1,9 @@
 # Layout-Aware-Document-Extraction-Chunking-and-Indexing
+Prerequisite:
+[Amazon Bedrock model access](https://docs.aws.amazon.com/bedrock/latest/userguide/model-access.html)
+[Deploy Embedding and Text Generation Large Language Models with SageMaker JumpStart](https://docs.aws.amazon.com/sagemaker/latest/dg/jumpstart-foundation-models-use.html)
+[Create OpenSearch Domian](https://docs.aws.amazon.com/opensearch-service/latest/developerguide/createupdatedomains.html). This solution uses **IAM** as master user for fine-grained access control.
+
 This sample notebook walks you through how you can leverage Amazon Textract layout feature to extract contents from your document while preserving the layout and reading format of the document. Amazon Textract Layout feature is able to detect the following sections:
 - Titles
 - Headers
