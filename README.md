@@ -39,7 +39,7 @@ It also walks you through sample Generative-AI usecases that can be improved wit
     <img src="images/table chunk.png" width="500" height="400"/>
     
     - **List:** List found in documents can be tricky to chunk. Naive chunking splist the list items by sentence or new line char, However only the first list chunk contains the list title (usually the sentence before the list) which provides inforamtion to the list items. Therefore, the succeeding list chunks become obselete. In this notebook lists are chunk by their list items and the title of the list are appended to each list chunk to preserve the information of the list in each of the chunks.
-    <img src="images/chunk list.png" width="500" height="400"/>
+    <img src="images/chunk list.png" width="600" height="400"/>
     
     - **Titles:** A lot of information can be added to each page chunk if the title of the page (if available) is added to each chunk. For each chunk in a page, the page title is appended to the chunk.
 6. To bolster the above table chunking startegy above, and provide as much needed context to the Large Language Model (LLM), the complete tables in each page are added as index metadata for each chunk in that page. When a passage is retrieved the addtional table metadata included in the page that passaage can be provided to the response LLM as additional context. This is especially helpful in topk=1 retrieved passage that are passed to the LLM and also when dealing with complex tables.
